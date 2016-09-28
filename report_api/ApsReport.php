@@ -100,7 +100,7 @@ class ApsReport {
 
         $buf = "{$sys1}\t{$mod1}\t{$sys2}\t{$mod2}\t{$ip}\t{$port}|{$timeMs}\t{$result}\t{$code}";
 
-        $ret = @socket_sendto($socket, $buf, strlen($buf), 0, '/run/aps_agent/APS_AGENT.AF_UNIX.SOCK_DGRAM');
+        $ret = @socket_sendto($socket, $buf, strlen($buf), 0, '/run/aps-agent/APS-AGENT.AF_UNIX.SOCK_DGRAM');
         return $ret;
     }
 }

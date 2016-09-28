@@ -26,8 +26,8 @@
 
 - make，然后 make rpm 生成 rpm 文件
 - 根据提示，找到生成的 rpm 文件路径，root 权限执行 rpm -ivh
-    - 如果没有 root 权限安装 rpm，make 后可以先执行 `./bin/aps_agent $(whoami) unix_socket_dir log_dir` 用于测试。
-- 启动 aps_agent，/usr/local/aps_agent
+    - 如果没有 root 权限安装 rpm，make 后可以先执行 `./bin/aps-agent $(whoami) unix_socket_dir log_dir` 用于测试。
+- 启动 aps-agent，/usr/local/aps-agent
 - 数据发送接口参考 report_api 的内容，文件底部的注释包含使用例子。
 
 ### 查看实时数据

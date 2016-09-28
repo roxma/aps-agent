@@ -14,7 +14,7 @@ def Entry():
 
     PrintHead()
 
-    logFormat="/var/log/aps_agent/stat_sec-%s.log"
+    logFormat="/var/log/aps-agent/stat_sec-%s.log"
 
     seekEnd = 1
     curDate = datetime.datetime.now().strftime('%Y%m%d')

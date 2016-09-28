@@ -31,7 +31,7 @@ void* input_and_process_thread(void*);
 void clean_log_files(const char* dir);
 
 
-const char * SERVER_FILENAME = "APS_AGENT.AF_UNIX.SOCK_DGRAM";
+const char * SERVER_FILENAME = "APS-AGENT.AF_UNIX.SOCK_DGRAM";
 
 int g_input_unix_sock_fd = 0;
 
@@ -52,23 +52,23 @@ pthread_mutex_t g_mutex;
 // unix socket permission, 777
 // data directory permission, 755
 // data log file permission, 644
-// ./aps_agent  unix_socket_directory data_directory
+// ./aps-agent  unix_socket_directory data_directory
 int main(int argc, char *argv[]) {
 
   // if(argc<2) {
-  //   fprintf(stderr,"./aps_agent unix_socket_directory\n");
+  //   fprintf(stderr,"./aps-agent unix_socket_directory\n");
   //   return 1;
   // }
 
-  const char* username = "aps_agent";
+  const char* username = "aps-agent";
   if(argc>=2) {
     username = argv[1];
   }
-  const char* socket_dir = "/run/aps_agent";
+  const char* socket_dir = "/run/aps-agent";
   if(argc>=3) {
     socket_dir = argv[2];
   }
-  const char* data_dir = "/var/log/aps_agent";
+  const char* data_dir = "/var/log/aps-agent";
   if(argc>=4) {
     data_dir = argv[3];
   }
